@@ -208,6 +208,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\InstructorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -275,8 +276,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
-    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Manage\Event\Index.cshtml" />
     <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\ModifyInstructor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

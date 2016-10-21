@@ -22,7 +22,7 @@
         <ul class="row">
             @foreach (var instructor in ViewBag.Instructors)
             {
-                <li>@Html.ActionLink((string)instructor.Name, "Modify", "Instructor", new { id = instructor.Id })</li>
+                <li>@Html.ActionLink((string)instructor.Name, "ModifyInstructor", "Instructor", new { id = instructor.Id })</li>
             }
         </ul>
     </div>
