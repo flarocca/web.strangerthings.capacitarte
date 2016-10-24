@@ -80,3 +80,39 @@ c:\users\b037080\documents\visual studio 2015\Projects\Capacitarte\Capacitarte\b
 c:\users\b037080\documents\visual studio 2015\Projects\Capacitarte\Capacitarte\obj\Debug\Capacitarte.csprojResolveAssemblyReference.cache
 c:\users\b037080\documents\visual studio 2015\Projects\Capacitarte\Capacitarte\obj\Debug\Capacitarte.dll
 c:\users\b037080\documents\visual studio 2015\Projects\Capacitarte\Capacitarte\obj\Debug\Capacitarte.pdb
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\ApplicationInsights.config
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Capacitarte.dll.config
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Capacitarte.dll
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Capacitarte.pdb
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AI.DependencyCollector.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AI.Web.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AI.WindowsServer.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.ApplicationInsights.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.Helpers.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.Mvc.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.Optimization.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.Razor.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.WebPages.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.WebPages.Deployment.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\System.Web.WebPages.Razor.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Antlr3.Runtime.pdb
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Newtonsoft.Json.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\EntityFramework.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\EntityFramework.SqlServer.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.Google.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Facundo\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.csprojResolveAssemblyReference.cache
+D:\Facundo\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.dll
+D:\Facundo\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.pdb
