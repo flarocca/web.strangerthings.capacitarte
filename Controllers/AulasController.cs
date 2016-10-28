@@ -25,14 +25,12 @@ namespace Capacitarte.Controllers
         public ActionResult Details(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Aula aula = db.Aulas.Include(i => i.Sede).SingleOrDefault(x => x.Id == id);
+
+            var aula = db.Aulas.Include(i => i.Sede).SingleOrDefault(x => x.Id == id);
             if (aula == null)
-            {
                 return HttpNotFound();
-            }
+
             return View(aula);
         }
 
@@ -67,9 +65,8 @@ namespace Capacitarte.Controllers
         public ActionResult Edit(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+
             var aula = db.Aulas.Include(i => i.Sede).SingleOrDefault(x => x.Id == id);
             var model = new AulaViewModel()
             {
@@ -81,9 +78,8 @@ namespace Capacitarte.Controllers
                 SedeList = GetSedes()
             };
             if (aula == null)
-            {
                 return HttpNotFound();
-            }
+
             return View(model);
         }
 
@@ -98,10 +94,8 @@ namespace Capacitarte.Controllers
             {
                 var aula = db.Aulas.Include(i => i.Sede).SingleOrDefault(x => x.Id == model.Id);
                 if (aula.Sede.Id != model.SelectedSedeId)
-                {
-                    var sede = db.Sedes.First(s => s.Id == model.SelectedSedeId);
-                    aula.Sede = sede;
-                }
+                    aula.Sede = db.Sedes.First(s => s.Id == model.SelectedSedeId);
+
                 aula.Descripcion = model.Descripcion;
                 aula.Cupo = model.Cupo;
                 aula.Estado = model.Estado;
@@ -116,14 +110,12 @@ namespace Capacitarte.Controllers
         public ActionResult Delete(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Aula aula = db.Aulas.Find(id);
+
+            var aula = db.Aulas.Find(id);
             if (aula == null)
-            {
                 return HttpNotFound();
-            }
+
             return View(aula);
         }
 
@@ -132,7 +124,7 @@ namespace Capacitarte.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Aula aula = db.Aulas.Find(id);
+            var aula = db.Aulas.Find(id);
             db.Aulas.Remove(aula);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -141,9 +133,8 @@ namespace Capacitarte.Controllers
         protected override void Dispose(bool disposing)
         {
             if (disposing)
-            {
                 db.Dispose();
-            }
+
             base.Dispose(disposing);
         }
 
