@@ -13,12 +13,16 @@ namespace Capacitarte.Controllers
 {
     public class AulasController : Controller
     {
+
         private CapacitarteContext db = new CapacitarteContext();
 
         // GET: Aulas
         public ActionResult Index()
         {
-            return View(db.Aulas.ToList());
+            if (db.Aulas != null)
+                return View(db.Aulas.ToList());
+
+            return View(new List<Aula>());
         }
 
         // GET: Aulas/Details/5

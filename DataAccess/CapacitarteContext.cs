@@ -19,10 +19,14 @@ namespace Capacitarte.DataAccess
         public DbSet<Sede> Sedes { get; set; }
         public DbSet<Aula> Aulas { get; set; }
         public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer<CapacitarteContext>(null);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

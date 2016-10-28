@@ -11,12 +11,8 @@ namespace Capacitarte.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Nombre")]
-        public string Nombre { get; set; }
-
-        [Required]
-        [Display(Name = "Apellido")]
-        public string Apellido { get; set; }
+        [Display(Name = "Usuario")]
+        public Usuario Usuario { get; set; }
 
         [Required]
         [Display(Name = "Direccion")]

@@ -18,7 +18,10 @@ namespace Capacitarte.Controllers
         // GET: Sedes
         public ActionResult Index()
         {
-            return View(db.Sedes.ToList());
+            if(db.Sedes != null)
+                return View(db.Sedes.ToList());
+
+            return View(new List<Sede>());
         }
 
         // GET: Sedes/Details/5
