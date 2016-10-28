@@ -207,7 +207,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Aula.cs" />
-    <Compile Include="Models\AulaViewModels.cs" />
+    <Compile Include="Models\AulaViewModel.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -295,6 +295,7 @@
     <Content Include="Views\Aulas\Details.cshtml" />
     <Content Include="Views\Aulas\Edit.cshtml" />
     <Content Include="Views\Aulas\Index.cshtml" />
+    <Content Include="Views\Shared\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

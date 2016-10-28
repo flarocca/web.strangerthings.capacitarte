@@ -1,4 +1,4 @@
-﻿@model Capacitarte.Models.Aula
+﻿@model Capacitarte.Models.AulaViewModel
 
 @{
     ViewBag.Title = "Editar Aula";
@@ -38,6 +38,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectedSedeId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.SelectedSedeId, Model.SedeList)
+                @Html.ValidationMessageFor(model => model.SelectedSedeId, "", new { @class = "text-danger" })
             </div>
         </div>
 

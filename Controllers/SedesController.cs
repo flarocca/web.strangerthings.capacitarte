@@ -47,10 +47,12 @@ namespace Capacitarte.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Descripcion")] Sede sede)
+        public ActionResult Create([Bind(Include = "Descripcion")] Sede sede)
         {
             if (ModelState.IsValid)
             {
+                var sedeId = (db.Sedes == null || db.Sedes.Count() == 0 ? 0 : db.Sedes.Max(a => a.Id)) + 1;
+                sede.Id = sedeId;
                 db.Sedes.Add(sede);
                 db.SaveChanges();
                 return RedirectToAction("Index");
