@@ -11,20 +11,22 @@ namespace Capacitarte.DataAccess
     public class CapacitarteContext : DbContext
     {
 
-        public CapacitarteContext() : base("CapacitarteContext")
+        public CapacitarteContext() : base("Capacitarte")
         {
         }
 
-        public DbSet<Instructor> Instructores { get; set; }
+        public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Sede> Sedes { get; set; }
         public DbSet<Aula> Aulas { get; set; }
         public DbSet<Evento> Eventos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Rol> Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            Database.SetInitializer<CapacitarteContext>(null);
+            //Database.SetInitializer(new CreateDatabaseIfNotExists<CapacitarteContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CapacitarteContext>());
 
             base.OnModelCreating(modelBuilder);
         }

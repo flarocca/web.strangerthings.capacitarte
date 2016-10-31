@@ -1,0 +1,38 @@
+﻿@model Capacitarte.Models.Sede
+
+@{
+    ViewBag.Title = "Detalle de Sede";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Descripcion)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+    </dl>
+    <h4>@Html.DisplayNameFor(model => model.Aulas)</h4>
+    <dl class="dl-vertical">
+        @if (Model.Aulas != null)
+        {
+            foreach (var aula in Model.Aulas)
+            {
+                <dd>
+                    @Html.DisplayFor(model => model.Descripcion)
+                </dd>
+            }
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

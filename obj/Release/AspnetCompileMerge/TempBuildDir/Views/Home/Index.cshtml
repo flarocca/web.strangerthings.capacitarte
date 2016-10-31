@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>CAPACITARTE</h1>
+    <p class="lead">Capacitarte es una plataforma web que facilita la gestión del proceso de formación de nuestras personas.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Mas info &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Eficiencia</h2>
+        <p>
+            Capacitarte permite optimazar los recursios utilizados en el 
+            proceso de formación de los colaboradores, logrando mejores
+            resultados en menot tiempo.
+        </p>
+        @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Más info &raquo;</a></p>*@
+        <p><a class="btn btn-default">Más info &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Disponible</h2>
+        <ul class="table">
+            <li>@Html.ActionLink("CRUD Sedes", "Index", "Sedes")</li>
+            <li>@Html.ActionLink("CRUD Aulas", "Index", "Aulas")</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Próximamente</h2>
+        <ul class="nav navbar-nav">
+            <li>CRUD de Eventos de Formación</li>
+            <li>CRUD de Gestores</li>
+            <li>CRUD de Instructores</li>
+        </ul>
+    </div>
+</div>

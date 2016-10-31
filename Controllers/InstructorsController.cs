@@ -18,7 +18,8 @@ namespace Capacitarte.Controllers
         // GET: Instructors
         public ActionResult Index()
         {
-            return View(db.Instructores.ToList());
+            var instructores = db.Usuarios.Select(u => u.Roles.Select(r => r.Rol.Descripcion == "Instructor"));
+            return View(instructores.ToList());
         }
 
         // GET: Instructors/Details/5
@@ -28,7 +29,7 @@ namespace Capacitarte.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Instructor instructor = db.Instructores.Find(id);
+            var instructor = db.Usuarios.Find(id);
             if (instructor == null)
             {
                 return HttpNotFound();
@@ -47,11 +48,11 @@ namespace Capacitarte.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Instructor instructor)
+        public ActionResult Create([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Usuario instructor)
         {
             if (ModelState.IsValid)
             {
-                db.Instructores.Add(instructor);
+                db.Usuarios.Add(instructor);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +67,7 @@ namespace Capacitarte.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Instructor instructor = db.Instructores.Find(id);
+            var instructor = db.Usuarios.Find(id);
             if (instructor == null)
             {
                 return HttpNotFound();
@@ -79,7 +80,7 @@ namespace Capacitarte.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Instructor instructor)
+        public ActionResult Edit([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Usuario instructor)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +98,7 @@ namespace Capacitarte.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Instructor instructor = db.Instructores.Find(id);
+            var instructor = db.Usuarios.Find(id);
             if (instructor == null)
             {
                 return HttpNotFound();
@@ -110,8 +111,8 @@ namespace Capacitarte.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Instructor instructor = db.Instructores.Find(id);
-            db.Instructores.Remove(instructor);
+            var instructor = db.Usuarios.Find(id);
+            db.Usuarios.Remove(instructor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

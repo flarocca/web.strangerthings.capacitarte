@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Capacitarte-20161021101552.mdf;Initial Catalog=aspnet-Capacitarte-20161021101552;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\b037080\\documents\\visual\ studio\ 2015\\Projects\\Capacitarte\\Capacitarte\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="CapacitarteContext-Web.config Connection String" description="CapacitarteContext Connection String used in web.config by the application to access the database." defaultValue="CapacitarteContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\b037080\\documents\\visual\ studio\ 2015\\Projects\\Capacitarte\\Capacitarte\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CapacitarteContext']/@connectionString" />
-  </parameter>
-</parameters>

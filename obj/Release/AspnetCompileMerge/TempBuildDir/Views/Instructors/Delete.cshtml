@@ -1,0 +1,72 @@
+﻿@model Capacitarte.Models.Instructor
+
+@{
+    ViewBag.Title = "Eliminar Instructor";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Está seguro que desea elliminar el instructor?</h3>
+<div>
+    <h4>Instructor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gerencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gerencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jefatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jefatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convenio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

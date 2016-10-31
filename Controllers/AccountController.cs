@@ -82,7 +82,7 @@ namespace Capacitarte.Controllers
                 return View(model);
             }
 
-            FormsAuthentication.SetAuthCookie(usuario.Nombre + " " + usuario.Apellido, true);
+            FormsAuthentication.SetAuthCookie(usuario.Empleado.Nombre + " " + usuario.Empleado.Apellido, true);
             return RedirectToLocal(returnUrl);
         }
 
