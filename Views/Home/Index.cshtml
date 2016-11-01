@@ -19,31 +19,21 @@
         @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Más info &raquo;</a></p>*@
         <p><a class="btn btn-default">Más info &raquo;</a></p>
     </div>
-    @if (Request.IsAuthenticated)
-    {
-        <div class="col-md-4">
-            <h2>Disponible</h2>
-            <ul class="table">
-                <li>@Html.ActionLink("CRUD Sedes", "Index", "Sedes")</li>
-                <li>@Html.ActionLink("CRUD Aulas", "Index", "Aulas")</li>
-            </ul>
-        </div>
-    }
-    else
-    {
-        <div class="col-md-4">
-            <h2>Disponible</h2>
-            <ul class="table">
-                <li>CRUD Sedes</li>
-                <li>CRUD Aulas</li>
-            </ul>
-        </div>
-    }
+
+    <div class="col-md-4">
+        <h2>Disponible</h2>
+        <ul class="table">
+            <li>CRUD Sedes</li>
+            <li>CRUD Aulas</li>
+        </ul>
+    </div>
+
     <div class="col-md-4">
         <h2>Próximamente</h2>
         <ul class="table">
             <li>CRUD de Eventos de Formación</li>
             <li>CRUD de Gestores</li>
+            <li>CRUD de Instructores</li>
             <li>CRUD de Instructores</li>
         </ul>
     </div>

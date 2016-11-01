@@ -62,6 +62,24 @@ namespace Capacitarte.Models
         public bool RememberMe { get; set; }
     }
 
+    public class SelectRolViewModel
+    {
+        [Required]
+        public string SelectdedId { get; set; }
+
+        public IEnumerable<SelectRol> Items { get; set; }
+    }
+
+    public class SelectRol
+    {
+        [Required]
+        public string Id { get; set; }
+
+        [Required]
+        [Display(Name = "Descripcion")]
+        public string Descripcion { get; set; }
+    }
+
     public class RegisterViewModel
     {
         [Required]

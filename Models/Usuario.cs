@@ -9,6 +9,11 @@ namespace Capacitarte.Models
 {
     public class Usuario
     {
+        public Usuario ()
+        {
+            Roles = new List<RolPorUsuario>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -19,7 +24,6 @@ namespace Capacitarte.Models
 
         [Required]
         [Display(Name = "Usuario")]
-        [Index(IsUnique = true)]
         public string Username { get; set; }
 
         [Required]
@@ -27,6 +31,6 @@ namespace Capacitarte.Models
         public string Password { get; set; }
 
         [Display(Name = "Roles")]
-        public IEnumerable<RolPorUsuario> Roles { get; set; }
+        public List<RolPorUsuario> Roles { get; set; }
     }
 }

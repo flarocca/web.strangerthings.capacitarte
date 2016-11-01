@@ -19,12 +19,16 @@ namespace Capacitarte.Models
 
     public class RolPorUsuario
     {
-        [Key]
-        [Display(Name = "Usuario")]
+        [Key, Column(Order = 0)]
+        public int Usuario_ID { get; set; }
+
+        [ForeignKey("Usuario_ID")]
         public Usuario Usuario { get; set; }
 
-        [Key]
-        [Display(Name = "Rol")]
+        [Key, Column(Order = 1)]
+        public int Rol_ID { get; set; }
+
+        [ForeignKey("Rol_ID")]
         public Rol Rol { get; set; }
     }
 }

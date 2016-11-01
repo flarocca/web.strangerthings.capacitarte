@@ -302,6 +302,7 @@
     <Content Include="Views\Aulas\Edit.cshtml" />
     <Content Include="Views\Aulas\Index.cshtml" />
     <Content Include="Views\Shared\Web.config" />
+    <Content Include="Views\Account\SelectRol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
