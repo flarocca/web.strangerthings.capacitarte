@@ -24,33 +24,29 @@
             <div class="navbar-collapse collapse">
                 @if (Request.IsAuthenticated)
                 {
-                    if (ViewBag.Rol == "Usuario")
+                    if (ViewBag.Rol == "Alumno")
                     {
                         <ul class="nav navbar-nav">
-                            @*<li>@Html.ActionLink("Mis Eventos", "MyEventsUser", "Events")</li>
-                                <li>@Html.ActionLink("Inscribirse a Evento", "Suscribe", "Events")</li>*@
-                            <li>Mis Eventos</li>
-                            <li>Inscribirse a Evento</li>
-                            <li>Mi Calendario</li>
+                            <li>@Html.ActionLink("Mis Eventos", "MyEventsAsUser", "Events")</li>
+                            <li>@Html.ActionLink("Inscribirse a Evento", "Suscribe", "Events")</li>
+                            <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsUser", "Calendar")</li>
+
                         </ul>
                     }
                     else if (ViewBag.Rol == "Instructor")
                     {
                         <ul class="nav navbar-nav">
-                            @*<li>@Html.ActionLink("Mis Eventos", "MyEventsInstructor", "Events")</li>*@
-                            <li>Mis Eventos</li>
-                            <li>Mi Calendario</li>
+                            <li>@Html.ActionLink("Mis Eventos", "MyEventsAsInstructor", "Events")</li>
+                            <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsInstructor", "Calendar")</li>
                         </ul>
                     }
                     else if (ViewBag.Rol == "Gestor")
                     {
                         <ul class="nav navbar-nav">
-                            @*<li>@Html.ActionLink("Instructores", "Index", "Instructors")</li>*@
-                            <li>Instructores</li>
+                            <li>@Html.ActionLink("Instructores", "Index", "Instructors")</li>
                             <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
                             <li>@Html.ActionLink("Aulas", "Index", "Aulas")</li>
-                            @*<li>@Html.ActionLink("Eventos de Formación", "Index", "Events")</li>*@
-                            <li>Eventos de Formación</li>
+                            <li>@Html.ActionLink("Eventos de Formación", "Index", "Events")</li>
                         </ul>
                     }
                     else if (ViewBag.Rol == "MandoMedio")

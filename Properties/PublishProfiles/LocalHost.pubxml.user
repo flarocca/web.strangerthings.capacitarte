@@ -28,10 +28,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:26</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/02/2016 13:51:45</publishTime>
+      <publishTime>11/02/2016 14:18:15</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/02/2016 13:51:45</publishTime>
+      <publishTime>11/02/2016 14:18:15</publishTime>
     </File>
     <File Include="bin/Capacitarte.dll">
       <publishTime>11/02/2016 13:51:36</publishTime>
@@ -199,7 +199,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:41</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/02/2016 13:51:38</publishTime>
+      <publishTime>11/02/2016 14:18:08</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>11/01/2016 13:53:26</publishTime>
@@ -373,7 +373,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/02/2016 10:15:25</publishTime>
+      <publishTime>11/02/2016 14:16:54</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
