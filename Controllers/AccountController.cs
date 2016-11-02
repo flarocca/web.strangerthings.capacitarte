@@ -80,14 +80,15 @@ namespace Capacitarte.Controllers
 
             FormsAuthentication.SetAuthCookie(usuario.Empleado.Nombre + " " + usuario.Empleado.Apellido, true);
             //return RedirectToLocal(returnUrl);
-            if(usuario.Roles.Count() > 1)
-            {
-                var items = new List<SelectRol>();
-                items.Add(new SelectRol() { Id = "Usuario", Descripcion = "Usuario" });
-                items.Add(new SelectRol() { Id = "Gestor", Descripcion = "Gestor" });
-                items.Add(new SelectRol() { Id = "Instructor", Descripcion = "Instructor" });
 
-                var selectRolModel = new SelectRolViewModel() { Items = items };
+            if (usuario.Roles.Count() > 1)
+            {
+                var roles = new List<SelectRol>();
+                foreach (var item in usuario.Roles)
+                {
+                    roles.Add(new SelectRol() { Id = item.Rol.Descripcion, Descripcion = item.Rol.Descripcion });
+                }
+                var selectRolModel = new SelectRolViewModel() { Items = roles };
                 return View("SelectRol", selectRolModel);
             }
             else

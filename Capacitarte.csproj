@@ -212,6 +212,7 @@
     <Compile Include="Models\AulaViewModel.cs" />
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\Evento.cs" />
+    <Compile Include="Models\InfoForTestingViewModel.cs" />
     <Compile Include="Models\Instructor.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -303,6 +304,7 @@
     <Content Include="Views\Aulas\Index.cshtml" />
     <Content Include="Views\Shared\Web.config" />
     <Content Include="Views\Account\SelectRol.cshtml" />
+    <Content Include="Views\Home\InfoForTesting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

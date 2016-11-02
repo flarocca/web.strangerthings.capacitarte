@@ -34,5 +34,10 @@ namespace Capacitarte.Models
         [Required]
         [Display(Name = "Convenio")]
         public string Convenio { get; set; }
+
+        public override string ToString()
+        {
+            return Nombre + " " + Apellido;
+        }
     }
 }

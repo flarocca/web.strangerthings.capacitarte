@@ -27,6 +27,7 @@ namespace Capacitarte.DataAccess
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             //Database.SetInitializer(new CreateDatabaseIfNotExists<CapacitarteContext>());
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<CapacitarteContext>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<CapacitarteContext>());
 
             base.OnModelCreating(modelBuilder);
         }

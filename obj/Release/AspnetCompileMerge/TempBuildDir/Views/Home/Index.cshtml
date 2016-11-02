@@ -10,28 +10,30 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Eficiencia</h2>
+        <h2>Información para testing</h2>
         <p>
-            Capacitarte permite optimazar los recursios utilizados en el 
-            proceso de formación de los colaboradores, logrando mejores
-            resultados en menot tiempo.
+            Aquí se encuentran listados los Usuarios del sistema
+            con toda la información correspondiente. Contraseñas,
+            roles, etc.
         </p>
-        @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Más info &raquo;</a></p>*@
-        <p><a class="btn btn-default">Más info &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("InfoForTesting", "Home")">Más info &raquo;</a></p>
     </div>
+
     <div class="col-md-4">
-        <h2>Disponible</h2>
+        <h2>Disponible V1.0</h2>
         <ul class="table">
-            <li>@Html.ActionLink("CRUD Sedes", "Index", "Sedes")</li>
-            <li>@Html.ActionLink("CRUD Aulas", "Index", "Aulas")</li>
+            <li>Ingreso al sistema según roles del usuario</li>
+            <li>CRUD Sedes</li>
+            <li>CRUD Aulas</li>
         </ul>
     </div>
+
     <div class="col-md-4">
-        <h2>Próximamente</h2>
-        <ul class="nav navbar-nav">
+        <h2>Próximamente V1.1</h2>
+        <ul class="table">
             <li>CRUD de Eventos de Formación</li>
-            <li>CRUD de Gestores</li>
             <li>CRUD de Instructores</li>
+            <li>CRUD de Alumnos</li>
         </ul>
     </div>
 </div>

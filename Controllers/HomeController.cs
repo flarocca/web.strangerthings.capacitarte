@@ -11,6 +11,8 @@ namespace Capacitarte.Controllers
 {
     public class HomeController : Controller
     {
+        private CapacitarteContext db = new CapacitarteContext();
+
         public ActionResult Index()
         {
             if(TempData["Rol"] != null)
@@ -31,6 +33,16 @@ namespace Capacitarte.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult InfoForTesting()
+        {
+            var model = new InfoForTestingViewModel();
+            model.Usuarios = db.Usuarios.Include(u => u.Empleado).Include(r => r.Roles).ToList();
+            model.Roles = db.Roles.ToList();
+            model.Empleados = db.Empleados.ToList();
+
+            return View(model);
         }
     }
 }
