@@ -119,6 +119,6 @@ C:\Projects\web.strangerthings.capacitarte\bin\Capacitarte.dll
 C:\Projects\web.strangerthings.capacitarte\bin\Capacitarte.pdb
 C:\Projects\web.strangerthings.capacitarte\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Projects\web.strangerthings.capacitarte\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.csprojResolveAssemblyReference.cache
 C:\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.dll
 C:\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.pdb
-C:\Projects\web.strangerthings.capacitarte\obj\Debug\Capacitarte.csprojResolveAssemblyReference.cache

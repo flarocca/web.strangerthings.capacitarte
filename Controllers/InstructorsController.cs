@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Capacitarte.DataAccess;
 using Capacitarte.Models;
+using System.Data.Entity.Validation;
 
 namespace Capacitarte.Controllers
 {
@@ -18,29 +19,27 @@ namespace Capacitarte.Controllers
         // GET: Instructors
         public ActionResult Index()
         {
-            var instructores = db.Usuarios.Select(u => u.Roles.Select(r => r.Rol.Descripcion == "Instructor"));
-            return View(instructores.ToList());
-        }
-
-        // GET: Instructors/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var instructor = db.Usuarios.Find(id);
-            if (instructor == null)
-            {
-                return HttpNotFound();
-            }
-            return View(instructor);
+            var instructores = db.Usuarios.Include(u => u.Empleado).Where(u => u.Roles.Where(r => r.Rol.Descripcion == "Instructor").Count() > 0).ToList();
+            return View(instructores);
         }
 
         // GET: Instructors/Create
-        public ActionResult Create()
+        public ActionResult SelectInstructors()
         {
-            return View();
+            var instructores = db.Usuarios.Include(u => u.Empleado)
+                          .Where(u => u.Roles.Where(r => r.Rol.Descripcion == "Instructor").Count() > 0).ToList()
+                          .Select(u => new InstructorSelectedViewModel() { Descripcion = u.Empleado.ToString(), Selected = true, Usuario_ID = u.Id }).ToList();
+
+            var noInstructores = db.Usuarios.Include(u => u.Empleado)
+                          .Where(u => u.Roles.Where(r => r.Rol.Descripcion == "Instructor").Count() == 0).ToList()
+                          .Select(u => new InstructorSelectedViewModel() { Descripcion = u.Empleado.ToString(), Selected = false, Usuario_ID = u.Id }).ToList();
+
+            var model = new List<InstructorSelectedViewModel>();
+            model.AddRange(instructores);
+            model.AddRange(noInstructores);
+            model.OrderBy(i => i.Descripcion);
+
+            return View(model);
         }
 
         // POST: Instructors/Create
@@ -48,73 +47,55 @@ namespace Capacitarte.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Usuario instructor)
+        public ActionResult SelectInstructors(int[] selectedUsers)
         {
-            if (ModelState.IsValid)
+            var usuarios = db.Usuarios.Include(u => u.Empleado).Include(u => u.Roles).Include(u => u.Roles.Select(r => r.Rol)).ToList();
+            foreach (var usuario in usuarios)
             {
-                db.Usuarios.Add(instructor);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ExistIn(usuario.Id, selectedUsers))
+                {
+                    if (usuario.Roles.Where(u => u.Rol.Descripcion == "Instructor").Count() == 0)
+                    {
+                        usuario.Roles.Add(new RolPorUsuario() { Usuario = usuario, Rol = GetRolInstructor() });
+                        db.Entry(usuario).State = EntityState.Modified;
+                    }
+                }
+                else
+                {
+                    if (usuario.Roles.Where(u => u.Rol.Descripcion == "Instructor").Count() > 0)
+                    {
+                        var rol = usuario.Roles.Find(r => r.Rol.Descripcion == "Instructor");
+                        usuario.Roles.Remove(rol);
+                        db.Entry(usuario).State = EntityState.Modified;
+                    }
+                }
             }
 
-            return View(instructor);
-        }
-
-        // GET: Instructors/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var instructor = db.Usuarios.Find(id);
-            if (instructor == null)
-            {
-                return HttpNotFound();
-            }
-            return View(instructor);
-        }
-
-        // POST: Instructors/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nombre,Apellido,Direccion,Gerencia,Jefatura,Convenio")] Usuario instructor)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(instructor).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(instructor);
-        }
-
-        // GET: Instructors/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var instructor = db.Usuarios.Find(id);
-            if (instructor == null)
-            {
-                return HttpNotFound();
-            }
-            return View(instructor);
-        }
-
-        // POST: Instructors/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            var instructor = db.Usuarios.Find(id);
-            db.Usuarios.Remove(instructor);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        private Rol GetRolInstructor()
+        {
+            Rol rol = null;
+
+            foreach (var item in db.Roles.ToList())
+            {
+                if (item.Descripcion == "Instructor")
+                    rol = item;
+            }
+
+            return rol;
+        }
+
+        private bool ExistIn(int id, int[] ids)
+        {
+            for (int i = 0; i < ids.Length; i++)
+            {
+                if (ids[i] == id)
+                    return true;
+            }
+            return false;
         }
 
         protected override void Dispose(bool disposing)

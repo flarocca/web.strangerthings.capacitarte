@@ -1,0 +1,94 @@
+﻿@model Capacitarte.Models.Evento
+
+@{
+    ViewBag.Title = "Detalle de Evento";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>@Model.Descripcion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @{
+            var aulaText = Model.Aula.ToString();
+            var instructorText = Model.Instructor.ToString();
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Costo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => aulaText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => instructorText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Presupuesto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Presupuesto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

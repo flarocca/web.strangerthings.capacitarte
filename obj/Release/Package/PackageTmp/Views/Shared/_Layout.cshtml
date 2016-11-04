@@ -24,37 +24,40 @@
             <div class="navbar-collapse collapse">
                 @if (Request.IsAuthenticated)
                 {
-                    if (ViewBag.Rol == "Alumno")
+                    if (@HttpContext.Current.Application["rol"] != null)
                     {
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Mis Eventos", "MyEventsAsUser", "Events")</li>
-                            <li>@Html.ActionLink("Inscribirse a Evento", "Suscribe", "Events")</li>
-                            <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsUser", "Calendar")</li>
+                        if (@HttpContext.Current.Application["rol"].ToString() == "Alumno")
+                        {
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Mis Eventos", "MyEventsAsUser", "Eventos")</li>
+                                <li>@Html.ActionLink("Inscribirse a Evento", "Suscribe", "Eventos")</li>
+                                <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsUser", "Calendar")</li>
 
-                        </ul>
-                    }
-                    else if (ViewBag.Rol == "Instructor")
-                    {
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Mis Eventos", "MyEventsAsInstructor", "Events")</li>
-                            <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsInstructor", "Calendar")</li>
-                        </ul>
-                    }
-                    else if (ViewBag.Rol == "Gestor")
-                    {
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Instructores", "Index", "Instructors")</li>
-                            <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
-                            <li>@Html.ActionLink("Aulas", "Index", "Aulas")</li>
-                            <li>@Html.ActionLink("Eventos de Formación", "Index", "Events")</li>
-                        </ul>
-                    }
-                    else if (ViewBag.Rol == "MandoMedio")
-                    {
-                        <ul class="nav navbar-nav">
-                            <li>Presupuesto</li>
-                            <li>Reportes</li>
-                        </ul>
+                            </ul>
+                        }
+                        else if (@HttpContext.Current.Application["rol"].ToString() == "Instructor")
+                        {
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Mis Eventos", "MyEventsAsInstructor", "Eventos")</li>
+                                <li>@Html.ActionLink("Mi Calendario", "MyCalendarAsInstructor", "Calendar")</li>
+                            </ul>
+                        }
+                        else if (@HttpContext.Current.Application["rol"].ToString() == "Gestor")
+                        {
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Instructores", "Index", "Instructors")</li>
+                                <li>@Html.ActionLink("Sedes", "Index", "Sedes")</li>
+                                <li>@Html.ActionLink("Aulas", "Index", "Aulas")</li>
+                                <li>@Html.ActionLink("Eventos de Formación", "Index", "Eventos")</li>
+                            </ul>
+                        }
+                        else if (@HttpContext.Current.Application["rol"].ToString() == "MandoMedio")
+                        {
+                            <ul class="nav navbar-nav">
+                                <li>Presupuesto</li>
+                                <li>Reportes</li>
+                            </ul>
+                        }
                     }
                 }
                 @Html.Partial("_LoginPartial")

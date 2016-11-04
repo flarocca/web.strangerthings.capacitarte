@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AulasController.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -213,9 +214,10 @@
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\Evento.cs" />
     <Compile Include="Models\InfoForTestingViewModel.cs" />
-    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\InstructorViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\EventoViewModel.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Sede.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -287,10 +289,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Manage\Event\Index.cshtml" />
-    <Content Include="Views\Instructors\Create.cshtml" />
-    <Content Include="Views\Instructors\Delete.cshtml" />
-    <Content Include="Views\Instructors\Details.cshtml" />
-    <Content Include="Views\Instructors\Edit.cshtml" />
+    <Content Include="Views\Instructors\SelectInstructors.cshtml" />
     <Content Include="Views\Instructors\Index.cshtml" />
     <Content Include="Views\Sedes\Create.cshtml" />
     <Content Include="Views\Sedes\Delete.cshtml" />
@@ -305,6 +304,14 @@
     <Content Include="Views\Shared\Web.config" />
     <Content Include="Views\Account\SelectRol.cshtml" />
     <Content Include="Views\Home\InfoForTesting.cshtml" />
+    <Content Include="Views\Eventos\MyEventsAsUser.cshtml" />
+    <Content Include="Views\Eventos\MyEventsAsInstructor.cshtml" />
+    <Content Include="Views\Eventos\Suscribe.cshtml" />
+    <Content Include="Views\Eventos\Index.cshtml" />
+    <Content Include="Views\Eventos\Create.cshtml" />
+    <Content Include="Views\Eventos\Delete.cshtml" />
+    <Content Include="Views\Eventos\Details.cshtml" />
+    <Content Include="Views\Eventos\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

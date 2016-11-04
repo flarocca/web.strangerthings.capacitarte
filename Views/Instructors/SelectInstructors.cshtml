@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Capacitarte.Models.InstructorSelectedViewModel>
+
+@{
+    ViewBag.Title = "Seleccionar Instructores";
+}
+
+<h2>Seleccionar Instructores</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Selected)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    <input type="checkbox" 
+                           name="selectedUsers" 
+                           value="@item.Usuario_ID"
+                           @{if (item.Selected) 
+                           { <text> checked='checked' </text>  } } />
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Guardar" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

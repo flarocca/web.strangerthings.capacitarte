@@ -7,57 +7,59 @@
 <h2>Instructores</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Instructor", "Create")
+    @Html.ActionLink("Seleccionar Instructores", "SelectInstructors")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.Username)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Apellido)
+            @Html.DisplayNameFor(model => model.Empleado.Nombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Direccion)
+            @Html.DisplayNameFor(model => model.Empleado.Apellido)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gerencia)
+            @Html.DisplayNameFor(model => model.Empleado.Direccion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Jefatura)
+            @Html.DisplayNameFor(model => model.Empleado.Gerencia)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Convenio)
+            @Html.DisplayNameFor(model => model.Empleado.Jefatura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Empleado.Convenio)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gerencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Jefatura)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Convenio)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalle", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Gerencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Jefatura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleado.Convenio)
+            </td>
+        </tr>
+    }
 
 </table>

@@ -93,7 +93,7 @@ namespace Capacitarte.Controllers
             }
             else
             {
-                TempData["Rol"] = usuario.Roles[0].Rol.Descripcion;
+                HttpContext.Application["rol"] = usuario.Roles[0].Rol.Descripcion;
                 return RedirectToLocal(returnUrl);
             }
         }
@@ -109,7 +109,7 @@ namespace Capacitarte.Controllers
             if(string.IsNullOrWhiteSpace(model.SelectdedId))
                 return View(model);
 
-            TempData["Rol"] = model.SelectdedId;
+            HttpContext.Application["rol"] = model.SelectdedId;
             return RedirectToLocal(returnUrl);
         }
 

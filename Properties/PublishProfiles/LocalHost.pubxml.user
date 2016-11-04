@@ -28,13 +28,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:26</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/02/2016 14:18:15</publishTime>
+      <publishTime>11/04/2016 15:00:14</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/02/2016 14:18:15</publishTime>
+      <publishTime>11/04/2016 15:00:14</publishTime>
     </File>
     <File Include="bin/Capacitarte.dll">
-      <publishTime>11/02/2016 13:51:36</publishTime>
+      <publishTime>11/04/2016 15:00:05</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/01/2016 13:53:28</publishTime>
@@ -199,7 +199,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:41</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/02/2016 14:18:08</publishTime>
+      <publishTime>11/04/2016 15:00:06</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>11/01/2016 13:53:26</publishTime>
@@ -262,7 +262,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>11/01/2016 13:53:27</publishTime>
+      <publishTime>11/04/2016 12:16:34</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
@@ -289,7 +289,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Aulas/Delete.cshtml">
-      <publishTime>11/01/2016 13:53:27</publishTime>
+      <publishTime>11/04/2016 09:52:46</publishTime>
     </File>
     <File Include="Views/Aulas/Details.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
@@ -300,6 +300,30 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="Views/Aulas/Index.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
+    <File Include="Views/Eventos/Create.cshtml">
+      <publishTime>11/04/2016 09:43:55</publishTime>
+    </File>
+    <File Include="Views/Eventos/Delete.cshtml">
+      <publishTime>11/04/2016 10:17:23</publishTime>
+    </File>
+    <File Include="Views/Eventos/Details.cshtml">
+      <publishTime>11/04/2016 10:40:52</publishTime>
+    </File>
+    <File Include="Views/Eventos/Edit.cshtml">
+      <publishTime>11/04/2016 10:54:51</publishTime>
+    </File>
+    <File Include="Views/Eventos/Index.cshtml">
+      <publishTime>11/03/2016 16:08:19</publishTime>
+    </File>
+    <File Include="Views/Eventos/MyEventsAsInstructor.cshtml">
+      <publishTime>11/03/2016 14:43:05</publishTime>
+    </File>
+    <File Include="Views/Eventos/MyEventsAsUser.cshtml">
+      <publishTime>11/03/2016 14:43:18</publishTime>
+    </File>
+    <File Include="Views/Eventos/Suscribe.cshtml">
+      <publishTime>11/03/2016 14:43:43</publishTime>
+    </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
@@ -307,7 +331,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/02/2016 10:34:31</publishTime>
+      <publishTime>11/04/2016 12:15:38</publishTime>
     </File>
     <File Include="Views/Home/InfoForTesting.cshtml">
       <publishTime>11/02/2016 11:28:42</publishTime>
@@ -325,7 +349,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Instructors/Index.cshtml">
-      <publishTime>11/01/2016 13:53:27</publishTime>
+      <publishTime>11/04/2016 14:47:25</publishTime>
+    </File>
+    <File Include="Views/Instructors/SelectInstructors.cshtml">
+      <publishTime>11/04/2016 14:19:05</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>
@@ -373,7 +400,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/01/2016 13:53:27</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/02/2016 14:16:54</publishTime>
+      <publishTime>11/03/2016 16:53:35</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>11/01/2016 13:53:27</publishTime>

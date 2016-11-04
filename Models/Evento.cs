@@ -35,6 +35,10 @@ namespace Capacitarte.Models
         public Aula Aula { get; set; }
 
         [Required]
+        [Display(Name = "Instructor")]
+        public Usuario Instructor { get; set; }
+
+        [Required]
         [Display(Name = "Estado")]
         public string Estado { get; set; }
 

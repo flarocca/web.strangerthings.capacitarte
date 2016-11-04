@@ -32,5 +32,10 @@ namespace Capacitarte.Models
 
         [Display(Name = "Roles")]
         public List<RolPorUsuario> Roles { get; set; }
+
+        public override string ToString()
+        {
+            return Empleado.ToString();
+        }
     }
 }

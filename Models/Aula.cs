@@ -16,6 +16,7 @@ namespace Capacitarte.Models
 
         [Required]
         [Display(Name = "Cupo")]
+        [Range(1, int.MaxValue, ErrorMessage = "Por favor ingrese un numero mayor a 0.")]
         public int Cupo { get; set; }
 
         [Required]
@@ -25,5 +26,10 @@ namespace Capacitarte.Models
         [Required]
         [Display(Name = "Sede")]
         public Sede Sede { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion + ", " + Sede.ToString();
+        }
     }
 }
